@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/16 11:46:39 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/28 17:02:28 by ihhadjal         ###   ########.fr       */
+/*   Created: 2025/05/22 11:07:07 by ihhadjal          #+#    #+#             */
+/*   Updated: 2025/05/22 11:41:07 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../resources/philo.h"
+#include "../header/libft.h"
 
-int main(int argc, char **argv)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
-	int	num;
 
-	i = 1;
-	if (argc < 5 || argc > 6)
-		return (printf("the ammount of arguments is not right\n"), 1);
-	while (argv[i])
+	i = 0;
+	while (src[i] != '\0')
 	{
-		num = ft_atoi(argv[i]);
-		check_input(argv[i], num);
+		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }

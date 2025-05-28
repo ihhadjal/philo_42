@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/16 11:46:39 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/28 17:02:28 by ihhadjal         ###   ########.fr       */
+/*   Created: 2025/05/22 11:41:00 by ihhadjal          #+#    #+#             */
+/*   Updated: 2025/05/22 11:41:20 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../resources/philo.h"
+#include "../header/libft.h"
 
-int main(int argc, char **argv)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
-	int	num;
+	int	j;
 
-	i = 1;
-	if (argc < 5 || argc > 6)
-		return (printf("the ammount of arguments is not right\n"), 1);
-	while (argv[i])
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
 	{
-		num = ft_atoi(argv[i]);
-		check_input(argv[i], num);
 		i++;
 	}
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }

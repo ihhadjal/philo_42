@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/16 11:46:39 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/28 17:02:28 by ihhadjal         ###   ########.fr       */
+/*   Created: 2025/04/17 09:24:53 by ihhadjal          #+#    #+#             */
+/*   Updated: 2025/05/27 16:01:12 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../resources/philo.h"
+#include "../header/libft.h"
 
-int main(int argc, char **argv)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int	num;
 
-	i = 1;
-	if (argc < 5 || argc > 6)
-		return (printf("the ammount of arguments is not right\n"), 1);
-	while (argv[i])
-	{
-		num = ft_atoi(argv[i]);
-		check_input(argv[i], num);
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
-	}
+	return (s1[i] - s2[i]);
 }

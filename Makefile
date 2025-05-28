@@ -6,15 +6,15 @@
 #    By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/08 12:12:56 by ihhadjal          #+#    #+#              #
-#    Updated: 2025/03/16 11:46:25 by ihhadjal         ###   ########.fr        #
+#    Updated: 2025/05/28 15:52:40 by ihhadjal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = code/main.c
+SRCS = code/main.c code/utils.c
 OBJS = ${SRCS:.c=.o}
 NAME = philo
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3 -pthread	
+CFLAGS = -Wall -Wextra -Werror -g3 -pthread
 RM = rm -rf
 LIBFT = ./resources/libft
 
