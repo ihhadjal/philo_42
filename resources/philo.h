@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 12:16:45 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/28 17:02:41 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/05/30 11:26:14 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int	check_input(char *argv, int num);
+int	parsing(int argc, char **argv);
+int	check_input(char *argv);
 #endif

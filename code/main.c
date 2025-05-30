@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 11:46:39 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/28 17:02:28 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/05/30 11:27:54 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,7 @@
 
 int main(int argc, char **argv)
 {
-	int	i;
-	int	num;
-
-	i = 1;
-	if (argc < 5 || argc > 6)
-		return (printf("the ammount of arguments is not right\n"), 1);
-	while (argv[i])
-	{
-		num = ft_atoi(argv[i]);
-		check_input(argv[i], num);
-		i++;
-	}
+	if (argc && argv)
+		parsing(argc, argv);
+	
 }
