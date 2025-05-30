@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 12:16:45 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/30 13:16:27 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/05/30 18:39:06 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <pthread.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <sys/time.h>
 # include <unistd.h>
 
 typedef struct s_arguments
@@ -33,7 +34,7 @@ typedef struct s_simulation
 {
 	int				death_flag;
 	pthread_mutex_t	death_flag_lock;
-	long long		simulation_start;
+	long			simulation_start;
 	pthread_mutex_t	logprint_lock;
 
 }					t_simulation;
@@ -46,18 +47,21 @@ typedef struct s_fork
 typedef struct s_philo
 {
 	int				philo_id;
+	long			last_meal_time;
+	int				meals_eaten;
 	pthread_t		thread_philo;
 	t_arguments		*philo_arguments;
+	t_simulation	*simulation_state;
 	t_fork			*right_fork;
 	t_fork			*left_fork;
-	long long		last_meal_time;
-	int				meals_eaten;
-	t_simulation	*simulation_state;
 }					t_philo;
+
 
 int					parsing(int argc, char **argv);
 int					check_input(char *argv);
 int					my_atoi(const char *nptr);
 int					my_isdigit(int c);
-void	init_program_arguments(char **argv);
+void				init_program_arguments(char **argv);
+void	init_philo(t_arguments *arguments, t_simulation *simulation);
+long	get_time(void);
 #endif
