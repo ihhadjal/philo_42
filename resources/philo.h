@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 12:16:45 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/30 18:39:06 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/05/30 19:11:40 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,6 @@ int					my_isdigit(int c);
 void				init_program_arguments(char **argv);
 void	init_philo(t_arguments *arguments, t_simulation *simulation);
 long	get_time(void);
+void	*routine(void *arg);
+void	lock_unlock(t_philo *philo);
 #endif
