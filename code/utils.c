@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:50:02 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/31 14:29:21 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/05/31 15:25:47 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,4 @@ int	my_atoi(const char *nptr)
 int	my_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
-}
-
-int	ft_usleep(size_t milliseconds)
-{
-	size_t	start;
-
-	start = get_time();
-	while ((get_time() - start) < milliseconds)
-		usleep(500);
-	return (0);
 }

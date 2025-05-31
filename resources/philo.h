@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 12:16:45 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/31 14:26:57 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/05/31 16:04:22 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ typedef struct s_philo
 	long			last_meal_time;
 	int				meals_eaten;
 	pthread_t		thread_philo;
+	pthread_t		thread_monitor;
 	t_arguments		*philo_arguments;
 	t_simulation	*simulation_state;
 	t_fork			*right_fork;
@@ -67,5 +68,5 @@ long	get_time(void);
 void	*routine(void *arg);
 void log_print(t_philo *philo, char *str);
 int	check_death_flag(t_philo *philo);
-int	ft_usleep(size_t milliseconds);
+int	monitoring(t_philo *philo);
 #endif
