@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 12:16:45 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/30 19:11:40 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/05/31 14:26:57 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,11 @@ int					parsing(int argc, char **argv);
 int					check_input(char *argv);
 int					my_atoi(const char *nptr);
 int					my_isdigit(int c);
-void				init_program_arguments(char **argv);
-void	init_philo(t_arguments *arguments, t_simulation *simulation);
+void				init_program_arguments(char **argv, t_philo **philo);
+t_philo	*init_philo(t_arguments *arguments, t_simulation *simulation);
 long	get_time(void);
 void	*routine(void *arg);
-void	lock_unlock(t_philo *philo);
+void log_print(t_philo *philo, char *str);
+int	check_death_flag(t_philo *philo);
+int	ft_usleep(size_t milliseconds);
 #endif
