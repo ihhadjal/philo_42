@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 16:13:18 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/05/31 14:02:27 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/06/03 00:17:43 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	parsing(int argc, char **argv)
 	int	num;
 
 	i = 1;
-	if (argc < 5 || argc > 5)
+	if (argc < 5 || argc > 6)
 		return (printf("error: the ammount of arguments is not right\n"), 1);
 	while (argv[i])
 	{
@@ -27,10 +27,12 @@ int	parsing(int argc, char **argv)
 		{
 			if (num <= 0)
 			{
-				return (printf("error: all arguments must be higher than zero\n"),
-					1);
+				printf("error: all arguments must be higher than zero\n");
+				return (1);
 			}
 		}
+		else
+			return (1);
 		i++;
 	}
 	return (0);
