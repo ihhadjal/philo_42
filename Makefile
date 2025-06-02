@@ -6,11 +6,12 @@
 #    By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/08 12:12:56 by ihhadjal          #+#    #+#              #
-#    Updated: 2025/05/30 18:41:06 by ihhadjal         ###   ########.fr        #
+#    Updated: 2025/06/02 23:38:40 by ihhadjal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = code/main.c code/utils.c code/parsing.c code/init.c
+SRCS = code/main.c code/utils.c code/parsing.c code/init.c code/routine.c code/routine2.c \
+code/monitoring.c code/utils2.c
 OBJS = ${SRCS:.c=.o}
 NAME = philo
 CC = gcc
