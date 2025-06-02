@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 12:16:45 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/06/03 00:08:31 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/06/03 00:25:22 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,12 @@ int					check_death_flag(t_philo *philo);
 void				*monitoring(void *arg);
 int					ft_usleep(size_t milliseconds);
 void				cleanup(t_philo *philo);
-int	one_philo_logic(t_philo *philo);
-int	left_fork_logic(t_philo *philo);
-int	right_fork_logic(t_philo *philo);
-void	eating_logic(t_philo *philo);
-void	check_times_eat(t_philo *philo);
-void	sleeping(t_philo *philo);
-void check_if_dead(t_philo *philo, int i);
-void	*check_if_finished(t_philo *philo, int nb_philo);
+int					one_philo_logic(t_philo *philo);
+int					left_fork_logic(t_philo *philo);
+int					right_fork_logic(t_philo *philo);
+void				eating_logic(t_philo *philo);
+void				check_times_eat(t_philo *philo);
+void				sleeping(t_philo *philo);
+void				check_if_dead(t_philo *philo, int i);
+void				*check_if_finished(t_philo *philo, int nb_philo);
 #endif
