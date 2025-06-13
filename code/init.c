@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 18:40:37 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/06/03 00:17:52 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:17:27 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ t_philo	*init_philo(t_arguments *arguments, t_simulation *simulation)
 		return (NULL);
 	if (!philo)
 		return (NULL);
+	simulation->fork_pointer = forks;
 	while (i < arguments->nb_philo)
 	{
 		pthread_mutex_init(&(forks[i].fork_lock), NULL);

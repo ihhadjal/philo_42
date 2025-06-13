@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:50:02 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/06/03 00:19:04 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:23:56 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void	cleanup(t_philo *philo)
 	pthread_mutex_destroy(&philo->simulation_state->meal_lock);
 	pthread_mutex_destroy(&philo->simulation_state->logprint_lock);
 	free(philo->philo_arguments);
+	free(philo->simulation_state->fork_pointer);
 	free(philo->simulation_state);
 	free(philo);
 }

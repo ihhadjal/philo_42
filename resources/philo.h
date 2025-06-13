@@ -6,7 +6,7 @@
 /*   By: ihhadjal <ihhadjal@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 12:16:45 by ihhadjal          #+#    #+#             */
-/*   Updated: 2025/06/03 00:25:22 by ihhadjal         ###   ########.fr       */
+/*   Updated: 2025/06/13 10:18:37 by ihhadjal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ typedef struct s_arguments
 	int				x_philo_eats;
 }					t_arguments;
 
+typedef struct s_fork
+{
+	pthread_mutex_t	fork_lock;
+}					t_fork;
+
 typedef struct s_simulation
 {
 	int				death_flag;
@@ -40,13 +45,8 @@ typedef struct s_simulation
 	long			simulation_start;
 	int				finished_eating;
 	pthread_mutex_t	logprint_lock;
-
+	t_fork			*fork_pointer;
 }					t_simulation;
-
-typedef struct s_fork
-{
-	pthread_mutex_t	fork_lock;
-}					t_fork;
 
 typedef struct s_philo
 {
